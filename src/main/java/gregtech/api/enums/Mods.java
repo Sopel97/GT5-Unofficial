@@ -104,6 +104,7 @@ public enum Mods implements IMod {
     IronChests(Names.IRON_CHESTS),
     IronChestsMinecarts(Names.IRON_CHESTS_MINECARTS),
     IronTanks(Names.IRON_TANKS),
+    IronTanksMinecarts(Names.IRON_TANKS_MINECARTS),
     JABBA(Names.J_A_B_B_A),
     KekzTech(Names.KEKZ_TECH),
     KubaTech(Names.KUBA_TECH),
@@ -286,6 +287,7 @@ public enum Mods implements IMod {
         public static final String IRON_CHESTS = "IronChest";
         public static final String IRON_CHESTS_MINECARTS = "ironchestminecarts";
         public static final String IRON_TANKS = "irontank";
+        public static final String IRON_TANKS_MINECARTS = "irontankminecarts";
         public static final String J_A_B_B_A = "JABBA";
         public static final String KEKZ_TECH = "kekztech";
         public static final String KUBA_TECH = "kubatech";
