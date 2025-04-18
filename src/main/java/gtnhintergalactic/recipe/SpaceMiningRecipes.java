@@ -903,7 +903,7 @@ public class SpaceMiningRecipes {
                 null,
                 null,
                 new int[] { 100, 100, 9800 },
-                new ItemStack[] { GTModHandler.getModItem("kubatech", "kubaitems", 1, 38),
+                new ItemStack[] { kubatech.api.enums.ItemList.DEFCDraconicSchematic.get(1),
                     GTModHandler.getModItem("DraconicEvolution", "draconicCore", 1, 0),
                     ItemList.ZPM.getWithCharge(1, Integer.MAX_VALUE - 1) },
                 1,
