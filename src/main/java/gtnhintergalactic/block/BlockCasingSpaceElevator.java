@@ -9,10 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
-import gtnhintergalactic.GTNHIntergalactic;
-import com.gtnewhorizons.gtnhintergalactic.item.IGItems;
-import com.gtnewhorizons.gtnhintergalactic.item.ItemCasingSpaceElevator;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gregtech.api.enums.Textures;
@@ -20,6 +16,9 @@ import gregtech.api.render.TextureFactory;
 import gregtech.api.util.GTLanguageManager;
 import gregtech.common.blocks.BlockCasingsAbstract;
 import gregtech.common.blocks.MaterialCasings;
+import gtnhintergalactic.GTNHIntergalactic;
+import gtnhintergalactic.item.IGItems;
+import gtnhintergalactic.item.ItemCasingSpaceElevator;
 
 /**
  * Casings used to construct the Space Elevator
@@ -65,13 +64,13 @@ public class BlockCasingSpaceElevator extends BlockCasingsAbstract {
     public void registerBlockIcons(IIconRegister iconRegister) {
         IconSECasing0 = iconRegister.registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/BaseCasing");
         IconSECasing1[0] = iconRegister
-                .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/SupportStructure");
+            .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/SupportStructure");
         IconSECasing1[1] = iconRegister
-                .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/SupportStructure_Side");
+            .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/SupportStructure_Side");
         IconSECasing2[0] = iconRegister
-                .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/InternalStructure");
+            .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/InternalStructure");
         IconSECasing2[1] = iconRegister
-                .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/InternalStructure_Side");
+            .registerIcon(GTNHIntergalactic.ASSET_PREFIX + ":spaceElevator/InternalStructure_Side");
     }
 
     /**

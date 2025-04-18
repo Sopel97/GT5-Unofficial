@@ -15,17 +15,16 @@ import static gregtech.api.enums.MetaTileEntityIDs.SpaceElevatorModulePumpT2;
 import static gregtech.api.enums.MetaTileEntityIDs.SpaceElevatorModulePumpT3;
 import static gregtech.api.enums.MetaTileEntityIDs.SpaceElevatorModuleResearch;
 
-import com.gtnewhorizons.gtnhintergalactic.item.IGItems;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.TileEntityDysonSwarm;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.TileEntityPlanetaryGasSiphon;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.elevator.TileEntitySpaceElevator;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleAssembler;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleManager;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleMiner;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.elevatormodules.TileEntityModulePump;
-import com.gtnewhorizons.gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleResearch;
-
 import gregtech.api.enums.ItemList;
+import gtnhintergalactic.item.IGItems;
+import gtnhintergalactic.tile.multi.TileEntityDysonSwarm;
+import gtnhintergalactic.tile.multi.TileEntityPlanetaryGasSiphon;
+import gtnhintergalactic.tile.multi.elevator.TileEntitySpaceElevator;
+import gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleAssembler;
+import gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleManager;
+import gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleMiner;
+import gtnhintergalactic.tile.multi.elevatormodules.TileEntityModulePump;
+import gtnhintergalactic.tile.multi.elevatormodules.TileEntityModuleResearch;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 
 /**
@@ -42,69 +41,69 @@ public class MachineLoader implements Runnable {
     public void run() {
 
         IGItems.PlanetaryGasSiphon = new TileEntityPlanetaryGasSiphon(
-                PlanetaryGasSiphonController.ID,
-                "PlanetaryGasSiphon",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.ig.siphon.name")).getStackForm(1);
+            PlanetaryGasSiphonController.ID,
+            "PlanetaryGasSiphon",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.ig.siphon.name")).getStackForm(1);
 
         IGItems.DysonSwarmController = new TileEntityDysonSwarm(
-                DysonSwarmController.ID,
-                "DysonSwarm",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.ig.dyson.name")).getStackForm(1);
+            DysonSwarmController.ID,
+            "DysonSwarm",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.ig.dyson.name")).getStackForm(1);
         // TODO populate ItemList field for this (and Siphon above)?
 
         IGItems.SpaceElevatorController = new TileEntitySpaceElevator(
-                SpaceElevatorController.ID,
-                "SpaceElevator",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.ig.elevator.name")).getStackForm(1);
+            SpaceElevatorController.ID,
+            "SpaceElevator",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.ig.elevator.name")).getStackForm(1);
         ItemList.SpaceElevatorController.set(IGItems.SpaceElevatorController);
 
         IGItems.SpaceElevatorModuleAssemblerT1 = new TileEntityModuleAssembler.TileEntityModuleAssemblerT1(
-                SpaceElevatorModuleAssemblerT1.ID,
-                "ProjectModuleAssemblerT1",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.assembler.t1.name")).getStackForm(1);
+            SpaceElevatorModuleAssemblerT1.ID,
+            "ProjectModuleAssemblerT1",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.assembler.t1.name")).getStackForm(1);
         IGItems.SpaceElevatorModuleAssemblerT2 = new TileEntityModuleAssembler.TileEntityModuleAssemblerT2(
-                SpaceElevatorModuleAssemblerT2.ID,
-                "ProjectModuleAssemblerT2",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.assembler.t2.name")).getStackForm(1);
+            SpaceElevatorModuleAssemblerT2.ID,
+            "ProjectModuleAssemblerT2",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.assembler.t2.name")).getStackForm(1);
         IGItems.SpaceElevatorModuleAssemblerT3 = new TileEntityModuleAssembler.TileEntityModuleAssemblerT3(
-                SpaceElevatorModuleAssemblerT3.ID,
-                "ProjectModuleAssemblerT3",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.assembler.t3.name")).getStackForm(1);
+            SpaceElevatorModuleAssemblerT3.ID,
+            "ProjectModuleAssemblerT3",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.assembler.t3.name")).getStackForm(1);
 
         IGItems.SpaceElevatorModuleMinerT1 = new TileEntityModuleMiner.TileEntityModuleMinerT1(
-                SpaceElevatorModuleMinerT1.ID,
-                "ProjectModuleMinerT1",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.miner.t1.name")).getStackForm(1);
+            SpaceElevatorModuleMinerT1.ID,
+            "ProjectModuleMinerT1",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.miner.t1.name")).getStackForm(1);
         IGItems.SpaceElevatorModuleMinerT2 = new TileEntityModuleMiner.TileEntityModuleMinerT2(
-                SpaceElevatorModuleMinerT2.ID,
-                "ProjectModuleMinerT2",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.miner.t2.name")).getStackForm(1);
+            SpaceElevatorModuleMinerT2.ID,
+            "ProjectModuleMinerT2",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.miner.t2.name")).getStackForm(1);
         IGItems.SpaceElevatorModuleMinerT3 = new TileEntityModuleMiner.TileEntityModuleMinerT3(
-                SpaceElevatorModuleMinerT3.ID,
-                "ProjectModuleMinerT3",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.miner.t3.name")).getStackForm(1);
+            SpaceElevatorModuleMinerT3.ID,
+            "ProjectModuleMinerT3",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.miner.t3.name")).getStackForm(1);
 
         IGItems.SpaceElevatorModulePumpT1 = new TileEntityModulePump.TileEntityModulePumpT1(
-                SpaceElevatorModulePumpT1.ID,
-                "ProjectModulePumpT1",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.pump.t1.name")).getStackForm(1);
+            SpaceElevatorModulePumpT1.ID,
+            "ProjectModulePumpT1",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.pump.t1.name")).getStackForm(1);
         IGItems.SpaceElevatorModulePumpT2 = new TileEntityModulePump.TileEntityModulePumpT2(
-                SpaceElevatorModulePumpT2.ID,
-                "ProjectModulePumpT2",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.pump.t2.name")).getStackForm(1);
+            SpaceElevatorModulePumpT2.ID,
+            "ProjectModulePumpT2",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.pump.t2.name")).getStackForm(1);
         IGItems.SpaceElevatorModulePumpT3 = new TileEntityModulePump.TileEntityModulePumpT3(
-                SpaceElevatorModulePumpT3.ID,
-                "ProjectModulePumpT3",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.pump.t3.name")).getStackForm(1);
+            SpaceElevatorModulePumpT3.ID,
+            "ProjectModulePumpT3",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.pump.t3.name")).getStackForm(1);
 
         IGItems.SpaceElevatorModuleManager = new TileEntityModuleManager(
-                SpaceElevatorModuleManager.ID,
-                "ProjectModuleManager",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.manager.t1.name")).getStackForm(1);
+            SpaceElevatorModuleManager.ID,
+            "ProjectModuleManager",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.manager.t1.name")).getStackForm(1);
 
         IGItems.SpaceElevatorModuleResearch = new TileEntityModuleResearch(
-                SpaceElevatorModuleResearch.ID,
-                "ProjectModuleResearch",
-                GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.research.t1.name")).getStackForm(1);
+            SpaceElevatorModuleResearch.ID,
+            "ProjectModuleResearch",
+            GCCoreUtil.translate("gt.blockmachines.multimachine.project.ig.research.t1.name")).getStackForm(1);
     }
 }

@@ -4,15 +4,14 @@ import java.util.Arrays;
 
 import net.minecraft.item.ItemStack;
 
-import gtnhintergalactic.GTNHIntergalactic;
-import com.gtnewhorizons.gtnhintergalactic.Tags;
-import gtnhintergalactic.item.IGItems;
-
 import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;
 import codechicken.nei.event.NEIRegisterHandlerInfosEvent;
 import codechicken.nei.recipe.HandlerInfo;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import gregtech.GT_Version;
+import gtnhintergalactic.GTNHIntergalactic;
+import gtnhintergalactic.item.IGItems;
 
 public class NEI_IG_Config implements IConfigureNEI {
 
@@ -26,14 +25,12 @@ public class NEI_IG_Config implements IConfigureNEI {
         API.registerUsageHandler(new GasSiphonRecipeHandler());
 
         for (ItemStack pump : Arrays.asList(
-                IGItems.SpaceElevatorModulePumpT1,
-                IGItems.SpaceElevatorModulePumpT2,
-                IGItems.SpaceElevatorModulePumpT3)) {
-            API.addRecipeCatalyst(pump, "com.gtnewhorizons.gtnhintergalactic.nei.SpacePumpModuleRecipeHandler");
+            IGItems.SpaceElevatorModulePumpT1,
+            IGItems.SpaceElevatorModulePumpT2,
+            IGItems.SpaceElevatorModulePumpT3)) {
+            API.addRecipeCatalyst(pump, "gtnhintergalactic.nei.SpacePumpModuleRecipeHandler");
         }
-        API.addRecipeCatalyst(
-                IGItems.PlanetaryGasSiphon,
-                "com.gtnewhorizons.gtnhintergalactic.nei.GasSiphonRecipeHandler");
+        API.addRecipeCatalyst(IGItems.PlanetaryGasSiphon, "gtnhintergalactic.nei.GasSiphonRecipeHandler");
 
         executed = true;
     }
@@ -41,17 +38,25 @@ public class NEI_IG_Config implements IConfigureNEI {
     @SubscribeEvent
     public void registerHandlerInfo(NEIRegisterHandlerInfosEvent event) {
         event.registerHandlerInfo(
-                new HandlerInfo.Builder(
-                        "com.gtnewhorizons.gtnhintergalactic.nei.SpacePumpModuleRecipeHandler",
-                        GTNHIntergalactic.MODNAME,
-                        GTNHIntergalactic.MODID).setDisplayStack(IGItems.SpaceElevatorModulePumpT1).setShiftY(6)
-                                .setWidth(160).setHeight(90).setMaxRecipesPerPage(3).build());
+            new HandlerInfo.Builder(
+                "gtnhintergalactic.nei.SpacePumpModuleRecipeHandler",
+                GTNHIntergalactic.MODNAME,
+                GTNHIntergalactic.MODID).setDisplayStack(IGItems.SpaceElevatorModulePumpT1)
+                    .setShiftY(6)
+                    .setWidth(160)
+                    .setHeight(90)
+                    .setMaxRecipesPerPage(3)
+                    .build());
         event.registerHandlerInfo(
-                new HandlerInfo.Builder(
-                        "com.gtnewhorizons.gtnhintergalactic.nei.GasSiphonRecipeHandler",
-                        GTNHIntergalactic.MODNAME,
-                        GTNHIntergalactic.MODID).setDisplayStack(IGItems.PlanetaryGasSiphon).setShiftY(6).setWidth(160)
-                                .setHeight(90).setMaxRecipesPerPage(3).build());
+            new HandlerInfo.Builder(
+                "gtnhintergalactic.nei.GasSiphonRecipeHandler",
+                GTNHIntergalactic.MODNAME,
+                GTNHIntergalactic.MODID).setDisplayStack(IGItems.PlanetaryGasSiphon)
+                    .setShiftY(6)
+                    .setWidth(160)
+                    .setHeight(90)
+                    .setMaxRecipesPerPage(3)
+                    .build());
     }
 
     @Override
@@ -61,6 +66,6 @@ public class NEI_IG_Config implements IConfigureNEI {
 
     @Override
     public String getVersion() {
-        return Tags.VERSION;
+        return GT_Version.VERSION;
     }
 }

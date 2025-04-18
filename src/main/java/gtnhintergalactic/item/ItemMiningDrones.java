@@ -8,10 +8,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
-import gtnhintergalactic.GTNHIntergalactic;
-
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.MaterialsUEVplus;
+import gtnhintergalactic.GTNHIntergalactic;
 
 /**
  * Drones used for the Space Mining module of the Space Elevator
@@ -22,8 +21,8 @@ public class ItemMiningDrones extends Item {
 
     /** Names of the mining drones */
     private static final String[] NAMES = new String[] { "MiningDroneLV", "MiningDroneMV", "MiningDroneHV",
-            "MiningDroneEV", "MiningDroneIV", "MiningDroneLuV", "MiningDroneZPM", "MiningDroneUV", "MiningDroneUHV",
-            "MiningDroneUEV", "MiningDroneUIV", "MiningDroneUMV", "MiningDroneUXV", "MiningDroneMAX" };
+        "MiningDroneEV", "MiningDroneIV", "MiningDroneLuV", "MiningDroneZPM", "MiningDroneUV", "MiningDroneUHV",
+        "MiningDroneUEV", "MiningDroneUIV", "MiningDroneUMV", "MiningDroneUXV", "MiningDroneMAX" };
     /** Icons of the mining drones */
     private static final IIcon[] ICONS = new IIcon[NAMES.length];
 

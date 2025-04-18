@@ -2,17 +2,16 @@ package gtnhintergalactic.proxy;
 
 import net.minecraftforge.common.MinecraftForge;
 
-import com.gtnewhorizons.gtnhintergalactic.block.BlockSpaceElevatorCable;
-import gtnhintergalactic.client.IGTextures;
-import gtnhintergalactic.client.TooltipUtil;
-import com.gtnewhorizons.gtnhintergalactic.nei.NEI_IG_Config;
-import gtnhintergalactic.render.RenderSpaceElevatorCable;
-import com.gtnewhorizons.gtnhintergalactic.tile.TileEntitySpaceElevatorCable;
-
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import gtnhintergalactic.block.BlockSpaceElevatorCable;
+import gtnhintergalactic.client.IGTextures;
+import gtnhintergalactic.client.TooltipUtil;
+import gtnhintergalactic.nei.NEI_IG_Config;
+import gtnhintergalactic.render.RenderSpaceElevatorCable;
+import gtnhintergalactic.tile.TileEntitySpaceElevatorCable;
 
 /**
  * Proxy used by the client to load stuff
@@ -33,7 +32,7 @@ public class ClientProxy extends CommonProxy {
         BlockSpaceElevatorCable.setRenderID(RenderingRegistry.getNextAvailableRenderId());
         RenderingRegistry.registerBlockHandler(BlockSpaceElevatorCable.getRenderID(), new RenderSpaceElevatorCable());
         ClientRegistry
-                .bindTileEntitySpecialRenderer(TileEntitySpaceElevatorCable.class, new RenderSpaceElevatorCable());
+            .bindTileEntitySpecialRenderer(TileEntitySpaceElevatorCable.class, new RenderSpaceElevatorCable());
         new IGTextures().run();
         MinecraftForge.EVENT_BUS.register(new NEI_IG_Config());
     }

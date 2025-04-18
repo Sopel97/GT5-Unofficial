@@ -5,7 +5,8 @@ import static com.gtnewhorizon.gtnhlib.util.AnimatedTooltipHandler.*;
 import java.util.function.Supplier;
 
 import com.gtnewhorizon.gtnhlib.client.tooltip.LoreHolder;
-import com.gtnewhorizons.gtnhintergalactic.item.IGItems;
+
+import gtnhintergalactic.item.IGItems;
 
 /**
  * Utility functions for tooltips
@@ -28,32 +29,32 @@ public class TooltipUtil {
      */
     public static void postInit() {
         Supplier<String> AUTHOR_GLOWREDMAN = chain(
-                translatedText("ig.structure.author"),
-                text(": "),
-                animatedText(
-                        "glowredman",
-                        1,
-                        300,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE,
-                        DARK_BLUE + OBFUSCATED));
+            translatedText("ig.structure.author"),
+            text(": "),
+            animatedText(
+                "glowredman",
+                1,
+                300,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE,
+                DARK_BLUE + OBFUSCATED));
 
         addItemTooltip(IGItems.PlanetaryGasSiphon, AUTHOR_GLOWREDMAN);
         addItemTooltip(IGItems.DysonSwarmController, AUTHOR_GLOWREDMAN);
